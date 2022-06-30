@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metal Heroes | Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function mostrarContraseña() {
+        var tipo3 = document.getElementById("password_login");
+
+        if (tipo3.type == "password") {
+          tipo3.type = "text";
+        } else {
+          tipo3.type = "password";
+        }
+      }
+    </script>
   </head>
   <body>
     <header class="bg-rose-400">
@@ -22,22 +33,29 @@
       <div class="bg-rose-400 w-96 rounded-lg">
         <div>
           <p class="ml-24 mt-9 text-white">E-mail</p>
-          <input
-            type="email"
-            class="rounded-lg align-middle border-black border-2 ml-24"
-          />
+          <input type="email" class="rounded-lg align-middle ml-24" />
         </div>
-        <div class="py-12">
-          <p class="ml-24 text-white">Password</p>
-          <input
-            type="password"
-            size="20"
-            class="rounded-lg align-middle border-black border-2 ml-24"
-          />
+        <div class="flex">
+          <div>
+            <p class="ml-24 mt-5 text-white">Password</p>
+            <input
+              id="password_login"
+              type="password"
+              class="rounded-lg align-middle ml-24"
+            />
+          </div>
+          <div>
+            <button onclick="mostrarContraseña()" class="ml-4 mt-12">
+              <img
+                class="w-5"
+                src="C:\Users\Salva\project_web_page\Integradora_webpage\src\img\eye.png"
+              />
+            </button>
+          </div>
         </div>
         <div>
           <button
-            class="bg-cyan-400 rounded-lg ml-24 w-1/2 h-12 text-lg text-white"
+            class="bg-cyan-400 rounded-lg ml-24 mt-12 w-1/2 h-12 text-lg text-white"
           >
             Login account
           </button>
@@ -54,7 +72,7 @@
         </div>
       </div>
     </div>
-    <footer class="bg-rose-400 mt-28">
+    <footer class="bg-rose-400 mt-36">
       <!--Footer-->
       <div>
         <input type="button" name="Create an account" />

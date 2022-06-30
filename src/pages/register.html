@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metal Heroes | Register</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function mostrarContrasena() {
+        var tipo = document.getElementById("password");
+        var tipo2 = document.getElementById("password_2");
+
+        if (tipo.type == "password" || tipo2.type == "password_2") {
+          tipo.type = "text";
+          tipo2.type = "text";
+        } else {
+          tipo.type = "password";
+          tipo2.type = "password";
+        }
+      }
+    </script>
   </head>
   <body>
     <header class="bg-rose-400">
@@ -22,39 +36,39 @@
       <div class="bg-rose-400 w-96 rounded-lg">
         <div>
           <p class="ml-24 mt-9 text-white">Name</p>
-          <input
-            type="email"
-            class="rounded-lg align-middle border-black border-2 ml-24"
-          />
+          <input type="text" class="rounded-lg align-middle ml-24" />
         </div>
         <div>
           <p class="ml-24 mt-5 text-white">Last Name</p>
-          <input
-            type="email"
-            class="rounded-lg align-middle border-black border-2 ml-24"
-          />
+          <input type="text" class="rounded-lg align-middle ml-24" />
         </div>
         <div>
           <p class="ml-24 mt-5 text-white">E-mail</p>
-          <input
-            type="password"
-            size="20"
-            class="rounded-lg align-middle border-black border-2 ml-24"
-          />
+          <input type="email" size="20" class="rounded-lg align-middle ml-24" />
         </div>
         <div>
           <p class="ml-24 mt-5 text-white">Password</p>
-          <input
-            type="email"
-            class="rounded-lg align-middle border-black border-2 ml-24"
-          />
+          <div class="flex">
+            <input
+              id="password"
+              type="password"
+              class="rounded-lg align-middle ml-24"
+            />
+            <button onclick="mostrarContrasena()" class="ml-4">
+              <img
+                class="w-5"
+                src="C:\Users\Salva\project_web_page\Integradora_webpage\src\img\eye.png"
+              />
+            </button>
+          </div>
         </div>
         <div>
-          <p class="ml-24 mt-5 text-white">Confirm Password</p>
+          <p class="ml-24 mt-5 text-white password">Confirm Password</p>
           <input
+            id="password_2"
             type="password"
             size="20"
-            class="rounded-lg align-middle border-black border-2 ml-24"
+            class="rounded-lg align-middle ml-24"
           />
         </div>
         <div>
