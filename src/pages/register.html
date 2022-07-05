@@ -1,32 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metal Heroes | Register</title>
-</head>
-<body>
-    <header>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function mostrarContrasena() {
+        var tipo = document.getElementById("password");
+        var tipo2 = document.getElementById("password_2");
+
+        if (tipo.type == "password" || tipo2.type == "password_2") {
+          tipo.type = "text";
+          tipo2.type = "text";
+        } else {
+          tipo.type = "password";
+          tipo2.type = "password";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="bg-rose-400">
+      <!--Header-->
+      <img src="src\img\test.svg" alt="" />
+      <h1 class="text-3xl font-bold underline">Metal Heroes</h1>
+      <div>
+        <a href="#">About</a>
+        <a href="#">Contact us</a>
+      </div>
     </header>
+    <div class="flex justify-center items-center mt-32">
+      <!--Login inputs and titles-->
+      <div class="bg-rose-400 w-96 rounded-lg">
         <div>
-            <h1>Do you have any comments? Don't Worry send us a message!</h1>
-            <div>
-                <p>Name</p>
-                <input/>
-                <p>E-mail</p>
-                <input/>
-                <p>Password</p>
-                <input/>
-                <p>Confirm Password</p>
-                <input/>
-                <div>
-                    <button>Create Account</button>
-                    <p>If you have an account,</p><a href="">Login Here</a>
-                </div>
-            </div>
+          <p class="ml-24 mt-9 text-white">Name</p>
+          <input type="text" class="rounded-lg align-middle ml-24" />
         </div>
-    <footer>
+        <div>
+          <p class="ml-24 mt-5 text-white">Last Name</p>
+          <input type="text" class="rounded-lg align-middle ml-24" />
+        </div>
+        <div>
+          <p class="ml-24 mt-5 text-white">E-mail</p>
+          <input type="email" size="20" class="rounded-lg align-middle ml-24" />
+        </div>
+        <div>
+          <p class="ml-24 mt-5 text-white">Password</p>
+          <div class="flex">
+            <input
+              id="password"
+              type="password"
+              class="rounded-lg align-middle ml-24"
+            />
+            <button onclick="mostrarContrasena()" class="ml-4">
+              <img
+                class="w-5"
+                src="C:\Users\Salva\project_web_page\Integradora_webpage\src\img\eye.png"
+              />
+            </button>
+          </div>
+        </div>
+        <div>
+          <p class="ml-24 mt-5 text-white password">Confirm Password</p>
+          <input
+            id="password_2"
+            type="password"
+            size="20"
+            class="rounded-lg align-middle ml-24"
+          />
+        </div>
+        <div>
+          <button
+            class="mt-5 bg-cyan-400 rounded-lg ml-24 w-1/2 h-12 text-lg text-white"
+          >
+            Login account
+          </button>
+        </div>
+        <br />
+        <div class="ml-12 mb-12">
+          <p class="font-sans">
+            Or if you have an account,<a
+              href="login.html"
+              class="text-cyan-400 font-mono"
+              >Login Here</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-rose-400 mt-28">
+      <!--Footer-->
+      <div>
+        <input type="button" name="Create an account" />
+        <input type="button" name="Login" />
+      </div>
+      <div>
+        <a href="#">About</a>
+        <a href="#">Contact us</a>
+      </div>
+      <i>Metal Heroes - 2022</i>
     </footer>
-</body>
+  </body>
 </html>

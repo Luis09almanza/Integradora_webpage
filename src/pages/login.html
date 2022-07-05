@@ -1,29 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metal Heroes | Login</title>
-</head>
-<body>
-    <header>
-    </header>
-        <div>
-            <h1>Do you have any comments? Don't Worry send us a message!</h1>
-            <div>
-                <p>E-mail</p>
-                <input/>
-                <p>Password</p>
-                <input/>
-                <div>
-                    <button>Login account</button>
-                    <p>You don't have an account?,</p><a href="">Create Here</a>
-                </div>
-            </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function mostrarContraseña() {
+        var tipo3 = document.getElementById("password_login");
 
+        if (tipo3.type == "password") {
+          tipo3.type = "text";
+        } else {
+          tipo3.type = "password";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="bg-rose-400">
+      <!--Header-->
+      <img src="src\img\test.svg" alt="" />
+      <h1 class="text-3xl font-bold underline">Metal Heroes</h1>
+      <div>
+        <a href="#">About</a>
+        <a href="#">Contact us</a>
+      </div>
+    </header>
+    <div class="flex justify-center items-center mt-32">
+      <!--Login inputs and titles-->
+      <div class="bg-rose-400 w-96 rounded-lg">
+        <div>
+          <p class="ml-24 mt-9 text-white">E-mail</p>
+          <input type="email" class="rounded-lg align-middle ml-24" />
         </div>
-    <footer>
+        <div class="flex">
+          <div>
+            <p class="ml-24 mt-5 text-white">Password</p>
+            <input
+              id="password_login"
+              type="password"
+              class="rounded-lg align-middle ml-24"
+            />
+          </div>
+          <div>
+            <button onclick="mostrarContraseña()" class="ml-4 mt-12">
+              <img
+                class="w-5"
+                src="C:\Users\Salva\project_web_page\Integradora_webpage\src\img\eye.png"
+              />
+            </button>
+          </div>
+        </div>
+        <div>
+          <button
+            class="bg-cyan-400 rounded-lg ml-24 mt-12 w-1/2 h-12 text-lg text-white"
+          >
+            Login account
+          </button>
+        </div>
+        <br />
+        <div class="ml-12 mb-12">
+          <p class="font-sans">
+            You don't have an account?,<a
+              href="register.html"
+              class="text-cyan-400 font-mono"
+              >Create Here</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-rose-400 mt-36">
+      <!--Footer-->
+      <div>
+        <input type="button" name="Create an account" />
+        <input type="button" name="Login" />
+      </div>
+      <div>
+        <a href="#">About</a>
+        <a href="#">Contact us</a>
+      </div>
+      <i>Metal Heroes - 2022</i>
     </footer>
-</body>
+  </body>
 </html>
