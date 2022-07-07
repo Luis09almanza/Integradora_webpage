@@ -22,85 +22,124 @@
     </script>
   </head>
   <body>
-    <header class="bg-red-400">
-      <!--Header-->
-      <img src="src\img\test.svg" alt="" />
-      <h1 class="text-3xl font-bold underline">Metal Heroes</h1>
-      <div>
-        <a href="#">About</a>
-        <a href="#">Contact us</a>
+    <header
+      class="flex flex-wrap flex-row justify-center bg-red-400 text-white sticky top-0 shadow-2xl"
+    >
+      <div class="basis-1/2 pt-3 pb-3">
+        <img
+          src="../img/test.svg"
+          alt="Logotipo"
+          class="md:w-24 md:h-24 md:inline-flex hidden"
+        />
+        <h1 class="text-2xl font-bold inline-flex">Metal Heroes</h1>
+      </div>
+
+      <div class="flex-initial flex items-center justify-center">
+        <a
+          href="./about_us.html"
+          class="m-2 hover:text-cyan-400 hover:font-bold"
+          >About us</a
+        >
+        <a
+          href="./comments.html"
+          class="m-2 hover:text-cyan-400 hover:font-bold"
+          >Contact</a
+        >
       </div>
     </header>
+
     <!--Login inputs and titles-->
-    <div class="flex justify-center items-center mt-32">
-      <div class="bg-red-400 w-96 rounded-lg">
-        <div>
-          <p class="ml-24 mt-9 text-white">Name</p>
-          <input type="text" class="rounded-lg align-middle ml-24" />
-        </div>
-        <div>
-          <p class="ml-24 mt-5 text-white">Last Name</p>
-          <input type="text" class="rounded-lg align-middle ml-24" />
-        </div>
-        <div>
-          <p class="ml-24 mt-5 text-white">E-mail</p>
-          <input type="email" size="20" class="rounded-lg align-middle ml-24" />
-        </div>
-        <div>
-          <p class="ml-24 mt-5 text-white">Password</p>
-          <div class="flex">
+    <form>
+      <div class="flex justify-center items-center">
+        <div
+          class="bg-red-400 w-96 rounded-lg m-14 shadow-2xl shadow-indigo-500/75"
+        >
+          <div>
+            <p class="ml-24 mt-9 text-white">Name</p>
             <input
-              id="password"
+              type="text"
+              class="rounded-lg align-middle ml-24"
+              name="name"
+              id="name"
+            />
+          </div>
+          <div>
+            <p class="ml-24 mt-5 text-white">Last Name</p>
+            <input
+              type="text"
+              class="rounded-lg align-middle ml-24"
+              name="lastName"
+              id="lastName"
+            />
+          </div>
+          <div>
+            <p class="ml-24 mt-5 text-white">E-mail</p>
+            <input
+              type="email"
+              size="20"
+              class="rounded-lg align-middle ml-24"
+              name="email"
+              id="email"
+            />
+          </div>
+          <div>
+            <p class="ml-24 mt-5 text-white">Password</p>
+            <div class="flex">
+              <input
+                id="password"
+                type="password"
+                class="rounded-lg align-middle ml-24"
+              />
+              <button onclick="mostrarContrasena()" class="ml-4">
+                <img class="w-5" src="../img/eye.png" />
+              </button>
+            </div>
+          </div>
+          <div>
+            <p class="ml-24 mt-5 text-white password">Confirm Password</p>
+            <input
+              id="password_2"
               type="password"
+              size="20"
               class="rounded-lg align-middle ml-24"
             />
-            <button onclick="mostrarContrasena()" class="ml-4">
-              <img
-                class="w-5"
-                src="C:\Users\Salva\project_web_page\Integradora_webpage\src\img\eye.png"
-              />
+          </div>
+          <div>
+            <button
+              class="mt-5 bg-cyan-400 rounded-lg ml-24 w-1/2 h-12 text-lg text-white"
+            >
+              Login account
             </button>
           </div>
-        </div>
-        <div>
-          <p class="ml-24 mt-5 text-white password">Confirm Password</p>
-          <input
-            id="password_2"
-            type="password"
-            size="20"
-            class="rounded-lg align-middle ml-24"
-          />
-        </div>
-        <div>
-          <button
-            class="mt-5 bg-cyan-400 rounded-lg ml-24 w-1/2 h-12 text-lg text-white"
-          >
-            Login account
-          </button>
-        </div>
-        <br />
-        <div class="ml-12 mb-12">
-          <p class="font-sans">
-            Or if you have an account,<a
-              href="login.html"
-              class="text-cyan-400 font-mono"
-              >Login Here</a
-            >
-          </p>
+          <br />
+          <div class="ml-12 mb-12">
+            <p class="font-sans">
+              Or if you have an account,
+              <a href="login.html" class="text-cyan-400 underline"
+                >Login Here.</a
+              >
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </form>
     <!--Footer-->
-    <footer class="bg-red-400 mt-28">
-      <div>
-        <input type="button" name="Create an account" />
-        <input type="button" name="Login" />
+    <footer class="flex flex-wrap flex-col bg-red-400 text-white">
+      <div class="inline-flex justify-center">
+        <a
+          href="./about_us.html"
+          class="m-2 hover:text-cyan-400 hover:font-bold"
+          >About</a
+        >
+        <a
+          href="./comments.html"
+          class="m-2 hover:text-cyan-400 hover:font-bold"
+          >Contact us</a
+        >
       </div>
-      <div>
-        <a href="#">About</a>
-        <a href="#">Contact us</a>
+      <div class="inline-flex justify-center mb-10">
+        <p>Metal Heroes - 2022</p>
       </div>
-      <i>Metal Heroes - 2022</i>
     </footer>
   </body>
 </html>

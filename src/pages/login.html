@@ -19,18 +19,35 @@
     </script>
   </head>
   <body>
-    <header class="bg-red-400">
-      <!--Header-->
-      <img src="src\img\test.svg" alt="" />
-      <h1 class="text-3xl font-bold underline">Metal Heroes</h1>
-      <div>
-        <a href="#">About</a>
-        <a href="#">Contact us</a>
+    <header
+      class="flex flex-wrap flex-row justify-center bg-red-400 text-white sticky top-0"
+    >
+      <div class="basis-1/2 pt-3 pb-3">
+        <img
+          src="../img/test.svg"
+          alt="Logotipo"
+          class="md:w-24 md:h-24 md:inline-flex hidden"
+        />
+        <h1 class="text-2xl font-bold inline-flex">Metal Heroes</h1>
+      </div>
+
+      <div class="flex-initial flex items-center justify-center">
+        <a
+          href="./about_us.html"
+          class="m-2 hover:text-cyan-400 hover:font-bold"
+          >About us</a
+        >
+        <a
+          href="./comments.html"
+          class="m-2 hover:text-cyan-400 hover:font-bold"
+          >Contact</a
+        >
       </div>
     </header>
-    <div class="flex justify-center items-center mt-32">
+
+    <div class="flex justify-center items-center m-20">
       <!--Login inputs and titles-->
-      <div class="bg-red-400 w-96 rounded-lg">
+      <div class="bg-red-400 w-96 rounded-lg text-white shadow-2xl">
         <div>
           <p class="ml-24 mt-9 text-white">E-mail</p>
           <input type="email" class="rounded-lg align-middle ml-24" />
@@ -46,10 +63,7 @@
           </div>
           <div>
             <button onclick="mostrarContraseña()" class="ml-4 mt-12">
-              <img
-                class="w-5"
-                src="C:\Users\Salva\project_web_page\Integradora_webpage\src\img\eye.png"
-              />
+              <img class="w-5" src="../img/eye.png" />
             </button>
           </div>
         </div>
@@ -63,26 +77,29 @@
         <br />
         <div class="ml-12 mb-12">
           <p class="font-sans">
-            You don't have an account?,<a
-              href="register.html"
-              class="text-cyan-400 font-mono"
-              >Create Here</a
-            >
+            You don't have an account?,
+            <a href="register.html" class="text-cyan-400">Create Here.</a>
           </p>
         </div>
       </div>
     </div>
-    <footer class="bg-red-400 mt-36">
-      <!--Footer-->
-      <div>
-        <input type="button" name="Create an account" />
-        <input type="button" name="Login" />
+
+    <footer class="flex flex-wrap flex-col bg-red-400 text-white">
+      <div class="inline-flex justify-center">
+        <a
+          href="./about_us.html"
+          class="m-2 hover:text-cyan-400 hover:font-bold"
+          >About</a
+        >
+        <a
+          href="./comments.html"
+          class="m-2 hover:text-cyan-400 hover:font-bold"
+          >Contact us</a
+        >
       </div>
-      <div>
-        <a href="#">About</a>
-        <a href="#">Contact us</a>
+      <div class="inline-flex justify-center mb-10">
+        <p>Metal Heroes - 2022</p>
       </div>
-      <i>Metal Heroes - 2022</i>
     </footer>
   </body>
 </html>

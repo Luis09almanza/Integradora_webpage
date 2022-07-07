@@ -8,13 +8,44 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header>
+    <!---------------------------- HEADER ------------------------------------>
+    <header class="flex flex-wrap flex-row justify-center bg-red-400 text-white sticky top-0">
+        <div class="basis-1/2 pt-3 pb-3">
+            <img src="../img/test.svg" alt="Logotipo" class="md:w-24 md:h-24 md:inline-flex hidden">
+            <h1 class="text-2xl font-bold inline-flex ">Metal Heroes</h1>
+        </div>
+
+        <div class="flex-initial flex items-center justify-center"> 
+            <a href="../../index.html" class="m-2 hover:text-cyan-400 hover:font-bold">Home</a>
+            <a href="./comments.html" class="m-2 hover:text-cyan-400 hover:font-bold">Contact</a>
+        </div>
+
     </header>
-    <h1 class="text-center">About us</h1>
-        <div class="justify-center flex flex-row">
+
+
+    <!-- CAMBIAR ESTE PEDO -->
+        
+        <div class="justify-center flex flex-col m-20">
+            <h1 class="text-center text-2xl font-bold m-2">About us</h1>
             <p class="text-white text-center rounded-md bg-red-400 basis-1/4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit natus doloremque illum quasi? Excepturi accusamus voluptatum odio inventore, voluptates possimus tempore explicabo illo et expedita, harum quibusdam cumque, ipsam eveniet.</p>
         </div>
-    <footer>
+    
+
+
+    <footer class="flex flex-wrap flex-col bg-red-400 text-white">
+        <div class="inline-flex justify-center m-5">
+            <a href="./register.html" class="bg-cyan-400 px-10 text-center py-2 font-bold rounded-lg text-xl m-2 hover:bg-transparent border-4 border-cyan-400 hover:font-normal transition">Create an account</a>
+            <a href="./login.html" class="border-4 text-center border-cyan-400 rounded-lg px-10 py-2 text-xl m-2 hover:bg-cyan-400 hover:font-bold ease-in-out transition" >Login</a>
+
+        </div>
+        <div class="inline-flex justify-center">
+            <a href="../../index.html" class="m-2 hover:text-cyan-400 hover:font-bold">Home</a>
+            <a href="./src/pages/comments.html" class="m-2 hover:text-cyan-400 hover:font-bold">Contact us</a>
+            
+        </div>
+        <div class="inline-flex justify-center mb-10">
+            <p>Metal Heroes - 2022</p>
+        </div>
 
     </footer>
 </body>
